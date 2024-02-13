@@ -108,7 +108,7 @@ class ExposuresMixin(metaclass=ABCMeta):
                 elif item["model"] == "dashboard":
                     entity = self.metabase.get_dashboard(uid=item["id"])
 
-                    cards = entity.get("ordered_cards", [])
+                    cards = entity.get("dashcards", [])
                     if not cards:
                         continue
 
